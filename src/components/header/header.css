@@ -1,0 +1,20 @@
+@component-namespace one{
+  @b header{
+    height: 120px;
+    margin-bottom: 30px;
+
+    display: flex;
+
+    @e logo {
+      width: 230px;
+      flex-shrink: 0;
+    }
+
+    @e menu {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
