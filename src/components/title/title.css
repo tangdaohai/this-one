@@ -16,6 +16,7 @@
 
     @e list{
       display: flex;
+      align-items: flex-end;
 
       & div{
         font-size: 18px;
@@ -25,6 +26,10 @@
 
         &:hover{
           color: #dd5862;
+        }
+
+        &:last-child{
+          margin-left: 0;
         }
       }
     }

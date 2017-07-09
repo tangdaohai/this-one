@@ -22,6 +22,7 @@
         background-color: #bbbbbb;
         margin-left: 15px;
         border-radius: 50%;
+        cursor: pointer;
 
         &:hover{
           background-color: #dd6862;

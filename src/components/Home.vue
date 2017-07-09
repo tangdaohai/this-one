@@ -5,6 +5,7 @@
     <search></search>
     <section>
       <contentTitle></contentTitle>
+      <my-summary></my-summary>
     </section>
   </div>
 </template>
@@ -13,10 +14,11 @@
   import banner from './banner/banner'
   import search from './search/search'
   import contentTitle from './title/title'
+  import mySummary from './summary/summary'
 
   export default {
     name: 'home',
-    components: { myHeader, banner, search, contentTitle }
+    components: { myHeader, banner, search, contentTitle, mySummary }
   }
 </script>
 <style lang="postcss">
