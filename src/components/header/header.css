@@ -4,17 +4,43 @@
     margin-bottom: 30px;
 
     display: flex;
+    align-items: center;
 
     @e logo {
       width: 230px;
       flex-shrink: 0;
     }
 
-    @e menu {
+    @e menus {
       display: flex;
       flex-grow: 1;
       align-items: center;
       justify-content: center;
+    }
+
+    @e menu{
+        height: 30px;
+        line-height: 30px;
+        font-size: 18px;
+        color: #444444;
+        padding: 0 80px;
+        border-right: 1px solid #e0e0e0;
+
+        &:last-child{
+          border-right: none;
+        }
+
+        & > span{
+          cursor: pointer;
+        }
+    }
+
+    @e user{
+      font-size: 13px;
+      color: #999999;
+      padding-left: 20px;
+      cursor: pointer;
+      flex-shrink: 0;
     }
   }
 }

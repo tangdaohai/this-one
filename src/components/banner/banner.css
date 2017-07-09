@@ -1,0 +1,36 @@
+@component-namespace one{
+  @b banner{
+
+    padding-bottom: 40px;
+
+    @e slideshow{
+      padding-bottom: 15px;
+    }
+
+    @e slide{
+      width: 1200px;
+      height: 400px;
+    }
+
+    @e indicator{
+      display: flex;
+      justify-content: center;
+
+      & div{
+        width: 8px;
+        height: 8px;
+        background-color: #bbbbbb;
+        margin-left: 15px;
+        border-radius: 50%;
+
+        &:hover{
+          background-color: #dd6862;
+        }
+
+        &.isActive{
+          background-color: #dd6862;
+        }
+      }
+    }
+  }
+}

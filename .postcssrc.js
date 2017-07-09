@@ -33,7 +33,7 @@ module.exports = {
         modifier: 'm'
       }
     },
-    // 'precss': {},    // 实现类Sass的功能，变量，嵌套，mixins
+    'precss': {},    // 实现类Sass的功能，变量，嵌套，mixins
     // 'postcss-url': {},
     // 'postcss-color-function': {},
     // 'postcss-sass-color-functions': {},
