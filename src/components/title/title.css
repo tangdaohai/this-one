@@ -18,7 +18,7 @@
       display: flex;
       align-items: flex-end;
 
-      & div{
+      & .type{
         font-size: 18px;
         color: #7b7b7b;
         margin-right: 30px;

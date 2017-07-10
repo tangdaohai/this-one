@@ -1,14 +1,26 @@
 @component-namespace one{
-  @b summary{
+  @b summaryBH{
 
     @e list{
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     @e card{
-      width: 570px;
-      height: 380px;
-      margin-right: 60px;
+
+      .big &{
+        width: 570px;
+        height: 380px;
+        margin-bottom: 40px;
+      }
+
+      .small &{
+        width: 360px;
+        height: 260px;
+        margin-bottom: 60px;
+      }
+
       position: relative;
 
       &:last-child{
@@ -23,7 +35,7 @@
     }
 
     @e description{
-      width: 100%;
+      width: 100.05%; /* 在 mac retina 屏幕 chrome 下右边会有1px 缝隙, 所以设为100.05 */
       height: 50px;
       opacity: 0.8;
       background-color: #fff;
@@ -43,9 +55,14 @@
       }
 
       & .like{
-
+        font-size: 13px;
+        color: #999;
         margin-right: 20px;
 
+        & .icon{
+          vertical-align: bottom;
+          margin-right: 6px;
+        }
       }
     }
   }

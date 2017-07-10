@@ -1,26 +1,17 @@
 <template>
-  <div class="one-summary">
-    <div class="one-summary__list">
-      <div class="one-summary__card">
-        <img class="thumbnail" src="../../assets/56e04233bae99.jpg" alt="">
-        <div class="one-summary__description">
-          <div class="unit">第一期</div>
-          <div class="like">
-            <img src="../../assets/unlike.png" alt="">
-          </div>
-        </div>
-      </div>
-
-      <div class="one-summary__card">
-        <img class="thumbnail" src="../../assets/56e04233bae99.jpg" alt="">
-        <div class="one-summary__description"></div>
-      </div>
-    </div>
+  <div >
+    <horizontal v-if="direction === 'h'" :size="size" :summaryData="summaryData"></horizontal>
   </div>
 </template>
 <script>
-  import './summary.css'
+  import Horizontal from './Horizontal'
   export default{
-    name: 'my-summary'
+    name: 'my-summary',
+    components: { Horizontal },
+    props: {
+      summaryData: Array,
+      direction: String,
+      size: String
+    }
   }
 </script>

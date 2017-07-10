@@ -15,9 +15,10 @@ export default {
     justify-content: center;
   }
 
-  /* body 样式*/
-  body {
-    font-family: '微软雅黑'
+  * {
+    font-family: '微软雅黑';
+    margin: 0;
+    padding: 0;
   }
 </style>
 
