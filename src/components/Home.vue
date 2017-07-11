@@ -8,8 +8,9 @@
       <contentTitle title="期刊" :types="['放松', '安静', '治愈', '浪漫']"></contentTitle>
       <my-summary :summaryData="summaryData" direction="h" size="big"></my-summary>
       <my-summary :summaryData="summaryDataSmall" direction="h" size="small"></my-summary>
-
+      <!-- 单曲 -->
       <contentTitle title="单曲" :types="['后摇', '民谣', '流行', '独立音乐']"></contentTitle>
+      <single-music></single-music>
     </section>
   </div>
 </template>
@@ -19,10 +20,11 @@ import banner from './banner/Banner'
 import search from './search/Search'
 import contentTitle from './title/Title'
 import mySummary from './summary/Summary'
+import singleMusic from './single-music/single-music'
 
 export default {
   name: 'home',
-  components: { myHeader, banner, search, contentTitle, mySummary },
+  components: { myHeader, banner, search, contentTitle, mySummary, singleMusic },
   data () {
     return {
       summaryData: [

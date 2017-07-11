@@ -5,10 +5,7 @@
         <img class="thumbnail" :src="card.src" alt="">
         <div class="one-summaryBH__description">
           <span class="unit">{{card.unit}}</span>
-          <div class="like">
-            <img class="icon" src="../../assets/unlike.png" alt="like">
-            <span>({{card.likeCount}})</span>
-          </div>
+          <like :likeCount="card.likeCount"></like>
         </div>
       </div>
     </div>
@@ -16,9 +13,12 @@
 </template>
 <script>
   /* 横向 大图 */
+  import like from '../like/like'
   import './horizontal.css'
+
   export default{
     name: 'horizontal',
+    components: { like },
     props: {
       summaryData: Array,
       size: String

@@ -1,0 +1,84 @@
+@component-namespace one{
+  @b single{
+    display: flex;
+    margin-bottom: 40px;
+
+    @e img{
+      width: 360px;
+      height: 360px;
+      margin-right: 112px;
+
+      & img{
+        width: 360px;
+        height: 360px;
+        border-radius: 50%;
+      }
+    }
+
+    @e description{
+
+      position: relative;
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @e title{
+
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+
+      & .arrow{
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-left: 10px solid #dd5862;
+      }
+
+      & span{
+        font-size: 20px;
+        color: #444;
+        margin-left: 5px;
+        margin-right: 20px;
+      }
+    }
+
+    @e conent{
+      line-height: 20px;
+      font-size: 13px;
+      text-indent: 30px;
+      letter-spacing: 2px;
+      color: #7d7d7d;
+      padding-right: 75px;
+
+      display: flex;
+      flex-direction: column;
+
+      & span:first-child{
+        margin-bottom: 30px;
+      }
+    }
+
+    @e like{
+
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: flex;
+
+      & .pubtime{
+        letter-spacing: 3px;
+        font-size: 15px;
+        color: #999;
+        margin-right: 20px;
+      }
+
+      & img{
+        vertical-align: bottom;
+        margin-right: 6px;
+      }
+    }
+  }
+}

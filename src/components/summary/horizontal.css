@@ -53,17 +53,6 @@
         color: #a56748;
         margin-left: 20px;
       }
-
-      & .like{
-        font-size: 13px;
-        color: #999;
-        margin-right: 20px;
-
-        & .icon{
-          vertical-align: bottom;
-          margin-right: 6px;
-        }
-      }
     }
   }
 }
