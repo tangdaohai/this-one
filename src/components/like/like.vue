@@ -1,7 +1,7 @@
 <template>
   <div class="one-like">
     <img class="one-like__icon" src="../../assets/unlike.png" alt="like">
-    <span>({{likeCount || 0}})</span>
+    <span class="one-like__count">({{likeCount || 0}})</span>
   </div>
 </template>
 <script>
@@ -23,6 +23,10 @@
       @e icon{
         vertical-align: bottom;
         margin-right: 6px;
+      }
+
+      @e count{
+        line-height: 16px;
       }
     }
   }

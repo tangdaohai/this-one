@@ -1,6 +1,6 @@
 <template>
   <div >
-    <horizontal v-if="direction === 'h'" :size="size" :summaryData="summaryData"></horizontal>
+    <horizontal v-if="direction === 'h'" :overlap="overlap" :size="size" :summaryData="summaryData"></horizontal>
   </div>
 </template>
 <script>
@@ -11,7 +11,8 @@
     props: {
       summaryData: Array,
       direction: String,
-      size: String
+      size: String,
+      overlap: Boolean
     }
   }
 </script>

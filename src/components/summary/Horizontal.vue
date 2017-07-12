@@ -3,9 +3,18 @@
     <div class="one-summaryBH__list">
       <div class="one-summaryBH__card" v-for="card in summaryData" :key="card.unit">
         <img class="thumbnail" :src="card.src" alt="">
-        <div class="one-summaryBH__description">
+
+        <div v-if="overlap" class="one-summaryBH__description--overlap">
           <span class="unit">{{card.unit}}</span>
           <like :likeCount="card.likeCount"></like>
+        </div>
+
+        <div v-if="!overlap" class="one-summaryBH__description--nooverlap">
+          <span class="text">{{card.text}}</span>
+          <div>
+            <span class="pubtime">{{card.time}}</span>
+            <like :likeCount="card.likeCount"></like>
+          </div>
         </div>
       </div>
     </div>
@@ -21,7 +30,8 @@
     components: { like },
     props: {
       summaryData: Array,
-      size: String
+      size: String,
+      overlap: Boolean
     }
   }
 </script>

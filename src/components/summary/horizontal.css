@@ -35,23 +35,55 @@
     }
 
     @e description{
-      width: 100.05%; /* 在 mac retina 屏幕 chrome 下右边会有1px 缝隙, 所以设为100.05 */
-      height: 50px;
-      opacity: 0.8;
-      background-color: #fff;
-      position: absolute;
-      bottom: 0;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      & .unit{
+      @m overlap{
+        width: 100.05%; /* 在 mac retina 屏幕 chrome 下右边会有1px 缝隙, 所以设为100.05 */
         height: 50px;
-        line-height: 50px;
-        font-size: 18px;
-        color: #a56748;
-        margin-left: 20px;
+        opacity: 0.8;
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & .unit{
+          height: 50px;
+          line-height: 50px;
+          font-size: 18px;
+          color: #a56748;
+          margin-left: 20px;
+        }
+      }
+
+      @m nooverlap{
+
+        margin-top: 30px;
+        margin-bottom: 60px;
+
+        & .text{
+          font-size: 15px;
+          color: #444;
+          letter-spacing: 3px;
+        }
+
+        & > div{
+          margin-top: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          & > .pubtime{
+            letter-spacing: 3px;
+            font-size: 15px;
+            color: #999;
+            margin-right: 20px;
+          }
+
+          & > .one-like{
+            margin-right: 0;
+          }
+        }
       }
     }
   }

@@ -6,11 +6,12 @@
     <section>
       <!-- 期刊 -->
       <contentTitle title="期刊" :types="['放松', '安静', '治愈', '浪漫']"></contentTitle>
-      <my-summary :summaryData="summaryData" direction="h" size="big"></my-summary>
-      <my-summary :summaryData="summaryDataSmall" direction="h" size="small"></my-summary>
+      <my-summary :summaryData="summaryData" overlap direction="h" size="big"></my-summary>
+      <my-summary :summaryData="summaryDataSmall" overlap direction="h" size="small"></my-summary>
       <!-- 单曲 -->
       <contentTitle title="单曲" :types="['后摇', '民谣', '流行', '独立音乐']"></contentTitle>
       <single-music></single-music>
+      <my-summary :summaryData="summaryDataNoOverlap" direction="h" size="small"></my-summary>
     </section>
   </div>
 </template>
@@ -51,6 +52,24 @@ export default {
           src: require('../assets/56e04233bae99.jpg'),
           unit: '第一期',
           likeCount: 192
+        }
+      ],
+      summaryDataNoOverlap: [
+        {
+          src: require('../assets/m_58b92358cd339.jpg'),
+          text: 'Alcest: 生命犹如一趟从明亮到黑暗的旅程',
+          time: '2017.03.23',
+          likeCount: 177
+        }, {
+          src: require('../assets/m_58982d024420b.jpg'),
+          text: '让风雨归我，孤寂归我',
+          time: '2017.03.23',
+          likeCount: 177
+        }, {
+          src: require('../assets/m_58258a6fe7547.jpg'),
+          text: 'Alcest: 生命犹如一趟从明亮到黑暗的旅程',
+          time: '2017.03.23',
+          likeCount: 177
         }
       ]
     }
