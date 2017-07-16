@@ -4,12 +4,37 @@
     padding-bottom: 40px;
 
     @e slideshow{
-      padding-bottom: 15px;
+      width: 1200px;
+      height: 400px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      display: flex;
+
+      & .switch-enter-active{
+        transition: all .3s;
+      }
+
+      & .switch-leave-active {
+        transition: all .6s;
+      }
+      & .switch-enter{
+        transform: translateX(1200px);
+      }
+
+      & .switch-leave-to /* .fade-leave-active in <2.1.8 */ {
+        transform: translateX(-1200px);
+      }
     }
 
     @e slide{
       width: 1200px;
       height: 400px;
+      border-radius: 11px;
+      flex-shrink: 0;
+
+      @when seccend{
+
+      }
     }
 
     @e indicator{

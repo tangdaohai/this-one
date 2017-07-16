@@ -12,6 +12,8 @@
       <contentTitle title="单曲" :types="['后摇', '民谣', '流行', '独立音乐']"></contentTitle>
       <single-music></single-music>
       <my-summary :summaryData="summaryDataNoOverlap" direction="h" size="small"></my-summary>
+
+      <contentTitle title="一段故事"></contentTitle>
     </section>
   </div>
 </template>

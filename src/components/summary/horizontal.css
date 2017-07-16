@@ -11,14 +11,20 @@
 
       .big &{
         width: 570px;
-        height: 380px;
         margin-bottom: 40px;
+
+        & .thumbnail{
+          height: 380px;
+        }
       }
 
       .small &{
         width: 360px;
-        height: 260px;
         margin-bottom: 60px;
+
+        & .thumbnail{
+          height: 260px;
+        }
       }
 
       position: relative;
@@ -29,7 +35,6 @@
 
       & .thumbnail{
         width: 100%;
-        height: 100%;
         border-radius: 5px;
       }
     }
@@ -59,7 +64,6 @@
       @m nooverlap{
 
         margin-top: 30px;
-        margin-bottom: 60px;
 
         & .text{
           font-size: 15px;
@@ -70,7 +74,6 @@
         & > div{
           margin-top: 20px;
           display: flex;
-          align-items: center;
           justify-content: flex-end;
 
           & > .pubtime{
