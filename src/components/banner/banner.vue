@@ -1,13 +1,22 @@
 <template>
   <div class="one-banner">
     <div class="one-banner__slideshow">
-      <transition name="switch" :duration="{ leave: 400 }">
-        <img class="one-banner__slide" :src="bannerArr[current % 5]" :key="bannerArr[current % 5]">
-        <!-- <img class="one-banner__slide is-seccend" :src="bannerArr[current % 5 + 1]" :style="{ order: 1 }"> -->
+      <transition name="switch" mode="out-in">
+        <img class="one-banner__slide"
+          :src="bannerArr[current % bannerArr.length]"
+          :key="bannerArr[current % bannerArr.length]"
+          @mouseenter="mouseenter"
+          @mouseleave="mouseleave">
       </transition>
     </div>
     <div class="one-banner__indicator">
-      <div v-for="i in 5" :key="i" :class="{isActive: i === (current % 5 + 1)}" @click="switchBanner(i - 1)"></div>
+      <div v-for="i in 5"
+        :key="i"
+        :class="{isActive: i === (current % bannerArr.length + 1)}"
+        @click="switchBanner(i - 1)"
+        @mouseenter="mouseenter"
+        @mouseleave="mouseleave">
+      </div>
     </div>
   </div>
 </template>
@@ -18,6 +27,7 @@
     data () {
       return {
         current: 0,
+        loopState: true,
         bannerArr: [
           require('../../assets/banner01.jpg'),
           require('../../assets/banner02.jpg'),
@@ -30,12 +40,18 @@
     methods: {
       switchBanner (index) {
         this.current = index
+      },
+      mouseenter () {
+        this.loopState = false
+      },
+      mouseleave () {
+        this.loopState = true
       }
     },
     created () {
       setInterval(() => {
-        this.current++
-      }, 2000)
+        this.loopState && this.current++
+      }, 3000)
     }
   }
 </script>

@@ -15,14 +15,17 @@
       }
 
       & .switch-leave-active {
-        transition: all .6s;
+        transition: all .5s;
+        opacity: 1;
       }
       & .switch-enter{
-        transform: translateX(1200px);
+        transform: scale(0.7);
+        opacity: .6;
       }
 
       & .switch-leave-to /* .fade-leave-active in <2.1.8 */ {
         transform: translateX(-1200px);
+        opacity: 0;
       }
     }
 
