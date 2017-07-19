@@ -11,20 +11,15 @@
       display: flex;
 
       & .switch-enter-active{
-        transition: all .3s;
+        transition: all .4s;
       }
 
       & .switch-leave-active {
-        transition: all .5s;
+        transition: all .6s;
         opacity: 1;
       }
-      & .switch-enter{
-        transform: scale(0.7);
-        opacity: .6;
-      }
-
-      & .switch-leave-to /* .fade-leave-active in <2.1.8 */ {
-        transform: translateX(-1200px);
+      & .switch-enter, & .switch-leave-to {
+        transform: scale(0.9);
         opacity: 0;
       }
     }
